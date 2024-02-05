@@ -1,0 +1,115 @@
+Users Table:
+
+UserID (Primary Key)
+FirstName
+LastName
+ContactNumber
+Email
+Address
+HealthRecords
+RegistrationDate
+Memberships Table:
+
+MembershipID (Primary Key)
+UserID (Foreign Key referencing Users)
+MembershipType
+RegistrationDate
+RenewalDate
+ExpirationDate
+Attendance Table:
+
+AttendanceID (Primary Key)
+UserID (Foreign Key referencing Users)
+CheckInTime
+CheckOutTime
+SessionID (if applicable)
+Class Schedule Table:
+
+ClassID (Primary Key)
+ClassName
+ScheduleDate
+StartTime
+EndTime
+InstructorID (Foreign Key referencing Staff)
+Bookings Table:
+
+BookingID (Primary Key)
+UserID (Foreign Key referencing Users)
+ClassID (Foreign Key referencing Class Schedule)
+FacilityID (if applicable)
+BookingDate
+Status (e.g., Confirmed, Canceled)
+Billing and Payments Table:
+
+BillID (Primary Key)
+UserID (Foreign Key referencing Users)
+Amount
+BillDate
+PaymentStatus
+PaymentDate
+PaymentMethod
+Staff Table:
+
+StaffID (Primary Key)
+FirstName
+LastName
+Role
+ShiftSchedule
+AttendanceID (Foreign Key referencing Attendance)
+Inventory Table:
+
+ItemID (Primary Key)
+ItemName
+Quantity
+Category
+Location
+Reports and Analytics Table:
+
+ReportID (Primary Key)
+UserID (Foreign Key referencing Users)
+ReportType
+GeneratedDate
+Content
+Communication Table:
+
+CommunicationID (Primary Key)
+UserID (Foreign Key referencing Users)
+MessageType (Email, SMS, Notification)
+MessageContent
+SendDateTime
+Access Control Table:
+
+AccessControlID (Primary Key)
+UserID (Foreign Key referencing Users)
+AccessDateTime
+AccessStatus (Entry/Exit)
+Health and Fitness Tracking Table:
+
+TrackingID (Primary Key)
+UserID (Foreign Key referencing Users)
+DeviceID (if applicable)
+TrackingDate
+Progress
+Goals
+Customer Support Table:
+
+TicketID (Primary Key)
+UserID (Foreign Key referencing Users)
+SupportType
+IssueDescription
+ResolutionStatus
+ResolutionDate
+Security and Privacy Table:
+
+SecurityID (Primary Key)
+UserID (Foreign Key referencing Users)
+TransactionID (if applicable)
+SecurityDate
+SecurityDetails
+Feedback and Surveys Table:
+
+SurveyID (Primary Key)
+UserID (Foreign Key referencing Users)
+FeedbackType
+FeedbackContent
+SurveyDate

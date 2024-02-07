@@ -1,0 +1,42 @@
+[
+    {
+      "nome": "bike indoor",
+      "desc": "Aula de ciclismo indoor que tem como objetivo simular subidas, descidas e alterações de carga e velocidade.",
+      "icon_img": "https://www.performaacademia.com.br/userfiles/blog/posts/design-sem-nome-21.png"
+    },
+    {
+      "nome": "Boxe",
+      "desc": "Se você quer perder peso, tonificar os músculos, aumentar sua resistência corporal e aliviar o estresse, você precisa conhecer os benefícios do boxe para sua saúde corporal e mental, a prática de boxe esculpe e tonifica a massa muscular.",
+      "icon_img": "https://pratiqueemcasa.com.br/blog/wp-content/uploads/2021/01/Qual-academia-escolher-para-treinar-boxe.jpg"
+    },
+    {
+      "nome": "Dance fitness",
+      "desc": "Atividade dinâmica e lúdica, com danças e coreografias de músicas de sucesso e do momento.",
+      "icon_img": "https://direct.rhapsody.com/imageserver/v2/playlists/pp.281653893/albums/images/500x500.jpeg"
+    },
+    {
+      "nome": "Judô",
+      "desc": "Tem por objetivo desenvolver técnicas de defesa pessoal, fortalecer o corpo, o físico e a mente de forma integrada. Foi considerado esporte oficial no Japão no final do século XIX.",
+      "icon_img": "https://dtda4cv2md3ne.cloudfront.net/image/filename/473301/x_lg_14238266_1430809026935065_3853995340043412927_n.jpg"
+    },
+    {
+      "nome": "Karatê",
+      "desc": "O karate é a perfeição do caráter, através de árduo treinamento e rigorosa disciplina da mente e do corpo. O karate-ka utiliza como armas as mãos, os braços, as pernas, os pés, enfim, qualquer parte do corpo.",
+      "icon_img": "https://d1a3v8txm37nbo.cloudfront.net/image/partners/498588/md_38d8fa03-4391-4db9-9618-ff492a1146c7_ecaeaddfcbIMGWA.jpg"
+    },
+    {
+      "nome": "Musculação",
+      "desc": "A musculação melhora o condicionamento cardiorrespiratório, diminui a quantidade de gordura, auxilia o emagrecimento, diminui o risco de diabetes e garante mais disposição física.",
+      "icon_img": "https://blog.gsuplementos.com.br/wp-content/uploads/2019/11/312844-como-escolher-o-tipo-de-treino-ideal-para-alcancar-seus-objetivos.jpg"
+    },
+    {
+      "nome": "Natação",
+      "desc": "Aulas com professores especializados que, baseados no nível de experiência de cada aluno, prescrevem e acompanham o treino visando o aprendizado de todos os 4 estilos de nado.",
+      "icon_img": "https://conceitos.com/wp-content/uploads/Natacao.jpg"
+    },
+    {
+      "nome": "Yoga",
+      "desc": "Técnica milenar que visa alinhamento postural, auto-conhecimento, proporcionando bem estar físico e mental, ajuda o auto conhecimento, diminui stress, melhora a qualidade do sono entre muitos outros benefícios!",
+      "icon_img": "http://www.swimex.com.br/wp-content/uploads/2014/01/pratica-de-yoga-academia.jpg"
+    }
+  ]

@@ -1,60 +1,93 @@
+// index.jsx
+
 import React from "react";
-import * as S from "./styled";
-import mod1 from "../../assets/icon modalidades/bike.png";
-import mod2 from "../../assets/icon modalidades/boxing.png";
-import mod3 from "../../assets/icon modalidades/dance.png";
-import mod5 from "../../assets/icon modalidades/judo.png";
-import mod6 from "../../assets/icon modalidades/karate.png";
-import mod7 from "../../assets/icon modalidades/musculacao.png";
-import mod8 from "../../assets/icon modalidades/natação.png";
-import mod9 from "../../assets/icon modalidades/yoga.png";
+import styled from 'styled-components';
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import indoor from "../../assets/icon modalidades/indoor.jpg";
+import zumba from "../../assets/icon modalidades/zumba.jpg";
+import karate from "../../assets/icon modalidades/karate.jpg";
+import weightlift from "../../assets/icon modalidades/weightlift.jpg";
+import yoga from "../../assets/icon modalidades/yoga.jpg";
+import judo from "../../assets/icon modalidades/Judo.jpg";
 
-export default function index() {
+const Container = styled.div`
+  position: relative;
+  width: 100%;
+`;
+
+const ServicesSection = styled.div`
+  position: absolute;
+  top: 10%; /* Adjust as needed */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 100%;
+`;
+
+const Heading = styled.h2`
+  font-size: 3em;
+  font-weight: bold;
+`;
+
+const SubHeading = styled.p`
+  font-size: 1.5em;
+  color: white;
+`;
+
+const Grad = styled.div`
+  // Your styles for Grad component
+`;
+
+const ModalidadeItem = styled.div`
+  // Your styles for ModalidadeItem component
+`;
+
+const ModalidadesFlex = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  margin-top: 90px; /* Adjust as needed */
+`;
+
+const ActivityCard = ({ image, text }) => {
   return (
-    <S.Container>
-      <h2 id="modalidades">Activities</h2>
+    <div className="card" style={{ width: '18rem', margin: '0 10px' }}>
+      <img src={image} className="card-img-top" alt={text} />
+      <div className="card-body">
+        <h5 className="card-title" style={{ color: 'black' }}>{text}</h5>
+        <p className="card-text" style={{ color: 'red' }}>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      </div>
+    </div>
+  );
+};
 
-      <S.ModalidadesFlex>
-        <S.ModalidadeItem>
-          <img src={mod1} alt="Bike indoor" />
-          <h3>Indoor cycling</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod2} alt="Boxe" />
-          <h3>Boxing</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod3} alt="Dance fitness" />
-          <h3>Dance fitness</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod5} alt="Judô" />
-          <h3>Judo</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod6} alt="Karatê" />
-          <h3>Karate</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod7} alt="Musculação" />
-          <h3>Weightlifting</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod8} alt="Natação" />
-          <h3>Swimming</h3>
-        </S.ModalidadeItem>
-
-        <S.ModalidadeItem>
-          <img src={mod9} alt="Yoga" />
-          <h3>Yoga</h3>
-        </S.ModalidadeItem>
-      </S.ModalidadesFlex>
-    </S.Container>
+export default function ActivitiesCarousel() {
+  return (
+    <Container>
+      <ServicesSection>
+        <Heading>Our Services</Heading>
+      </ServicesSection>
+      <Carousel fade>
+        <Carousel.Item>
+          <ModalidadesFlex>
+            <ActivityCard image={indoor} text="Indoor cycling" />
+            <ActivityCard image={zumba} text="Dance fitness" />
+            <ActivityCard image={karate} text="Karate" />
+          </ModalidadesFlex>
+        </Carousel.Item>
+        <Carousel.Item>
+          <ModalidadesFlex>
+            <ActivityCard image={judo} text="Judo" />
+            <ActivityCard image={yoga} text="Yoga" />
+            <ActivityCard image={weightlift} text="Weightlifting" />
+          </ModalidadesFlex>
+        </Carousel.Item>
+      </Carousel>
+    
+      <Grad></Grad>
+    </Container>
   );
 }

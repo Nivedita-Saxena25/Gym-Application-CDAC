@@ -9,7 +9,7 @@ export default function index() {
       <S.ContainerInfo>
         <S.Image src={img1} alt="Homem  fazendo musulação" />
         <S.InfoBeneficios>
-          <h2>Why choose Monster Gym?</h2>
+          <h2>Why Muscle Factory?</h2>
           <S.Image2 src={img1} alt="Homem fazendo musulação" />
           <S.InfoItem>
             <img src={CheckIcon} alt="check" />
@@ -21,7 +21,7 @@ export default function index() {
           </S.InfoItem>
           <S.InfoItem>
             <img src={CheckIcon} alt="check" />
-            <p>Monster GO (online workouts)</p>
+            <p>Muscle GO (online workouts)</p>
           </S.InfoItem>
           <S.InfoItem>
             <img src={CheckIcon} alt="check" />

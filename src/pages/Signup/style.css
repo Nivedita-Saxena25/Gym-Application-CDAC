@@ -1,0 +1,18 @@
+path{
+    color: #ff0022;
+}
+
+.inputSignup fieldset{
+    border-width: 2px;
+    border-color: #ff0022;
+}
+
+.inputSignup label{
+    color: #ff0022;
+    text-shadow: 0 0 10px #ff002295;
+}
+
+.inputSignup span{
+    color: #ff0022;
+    text-shadow: 0 0 10px #ff002295;
+}

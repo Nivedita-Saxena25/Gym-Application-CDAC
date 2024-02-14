@@ -1,0 +1,98 @@
+[
+  {
+    "cidade": "Pune",
+    "estado": "Maharashtra",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "Left Bhusari Colony, Kalagram Society, Pune 411028",
+    "academia_img": "https://scproduction.s3.sa-east-1.amazonaws.com/wysiwyg_uploads/cms/images/2018/10/01/19/07-h9ytse3i.JPG"
+  },
+  {
+    "cidade": "Indore",
+    "estado": "Madhya Pradesh",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "Sector-G, Scheme No.54 Behind SICA School, Indore (M.P.) - 452010",
+    "academia_img": "https://www.recreiodajuventude.com.br/userfiles/conteudos/academia-guarany1.jpg"
+  },
+  {
+    "cidade": "Bangalore",
+    "estado": "Karnataka",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "No. 67, 1st Floor, 15th Cross Road, 6th B Main Road, J P Nagar 3rd Phase,, Bangalore, Bangalore, Kar",
+    "academia_img": "https://files.nsctotal.com.br/s3fs-public/styles/paragraph_image_style/public/graphql-upload-files/cuidados-academia-coronavirus_0.jpg"
+  },
+  {
+    "cidade": "Jaipur",
+    "estado": "Rajasthan",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "Sdc Building, 4 Th And 5 Th Floor, 40-41, Calgiri Road, Mauji Colony, Malviya Nagar, Jaipur - 302017",
+    "academia_img": "SDC Building, 4th and 5th Floor, 40-41 Calgiri Marg, Mauji Colony, Near Cafe Coffee Day, Malviya Nagar, 302017"
+  },
+  {
+    "cidade": "Mohali",
+    "estado": "Punjab",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "SCO – 7, Phase 5, Sector 59, Sahibzada Ajit Singh Nagar, Punjab 160059",
+    "academia_img": "https://i0.wp.com/faroldenoticias.com.br/wp-content/uploads/2022/02/DSC_1631-scaled.jpg"
+  },
+  {
+    "cidade": "Mumbai",
+    "estado": "Maharashtra",
+    "valor": 700,
+    "inauguracao": true,
+    "endereco": "Bandra Kurla Complex, G-1, Ground Floor, North Avenue, Maker Maxity Bandra (East), Bandra Kurla Complex, Bandra East, Maharashtra 400051",
+    "academia_img": "https://dnd1g0gk41u1l.cloudfront.net/image/filename/4260834/x_lg_2wg8myhP9zpKJhkDMvtsLfCqzwAYoWO5.jpeg"
+  },
+  {
+    "cidade": "Hyderabad",
+    "estado": "Telangana",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "3-6-289, 3rd floor, Hyderguda Main road, Himayathnagar, Hyderabad - 500029",
+    "academia_img": "https://s3.amazonaws.com/smartsystem/pictures/3403/big/smart-fit-academia-mogi-das-cruzes-sp-sao-paulo-area-peso-livre-musculacao.jpg"
+  },
+  {
+    "cidade": "Vijaywada ",
+    "estado": "Telangana",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "D. No 40- 1- 146 A,, LEPL Building, 2nd floor, M.G. Road, Labbipet, Vijayawada - 520010",
+    "academia_img": "https://s3.amazonaws.com/smartsystem/pictures/5144/original/smart-fit-academia-unidade-jacarei-sp-3-equipamento-area-cardiovascular-simulador_de_escada.jpg"
+  },
+  {
+    "cidade": "Chandigadh",
+    "estado": "Punjab",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "S.C.O. 321-322 Sector 38-D Chandigarh",
+    "academia_img": "https://s3.amazonaws.com/smartsystem/pictures/4521/original/smart-fit-academia-unidade-barra_funda-sp-2-equipamento-area-cardiovascular-esteira.jpg"
+  },
+  {
+    "cidade": "Ranga Reddy",
+    "estado": "Telangana",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "8-1-293/e/10,APARNA ASTUTE,3RD FLOOR,SHAIKPET,RANGAREDDY,TELANGANA-500008",
+    "academia_img": "https://d1a3v8txm37nbo.cloudfront.net/image/filename/4116562/x_lg_uHpG43cezNFIPBafxdsBXAEw7Tk3NI70.png"
+  },
+  {
+    "cidade": "Panaji",
+    "estado": "Goa",
+    "valor": 700,
+    "inauguracao": true,
+    "endereco": "Doctor East Borges Road Ocean Park Residency, Dona Paula, Goa",
+    "academia_img": "https://carpediemacademia.com.br/wp-content/uploads/2021/10/estrutura-1.jpg"
+  },
+  {
+    "cidade": "Jalgaon",
+    "estado": "Maharashtra",
+    "valor": 800,
+    "inauguracao": false,
+    "endereco": "Shanti Arcade, S.No.490/4, Plot No. 58, 2nd Floor, M.J.College Road Jalgaon, Maharashtra 425002",
+    "academia_img": "https://veja.abril.com.br/wp-content/uploads/2021/01/ACADEMIA-VAZIA.jpg.jpg"
+  }
+]

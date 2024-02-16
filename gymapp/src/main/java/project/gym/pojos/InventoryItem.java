@@ -1,6 +1,6 @@
 package project.gym.pojos;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "inventory")

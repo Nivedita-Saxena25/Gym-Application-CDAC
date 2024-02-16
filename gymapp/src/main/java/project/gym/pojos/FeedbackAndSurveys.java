@@ -1,5 +1,5 @@
 package project.gym.pojos;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity

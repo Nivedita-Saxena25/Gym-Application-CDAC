@@ -2,16 +2,11 @@ package project.gym.pojos;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
+
 
 import java.util.Date;
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Entity
 @Table(name = "health_and_fitness_tracking")
 public class HealthAndFitnessTracking {

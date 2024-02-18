@@ -6,6 +6,8 @@ import project.gym.pojos.FeedbackAndSurveys;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Component;
+@Component
 public class FeedbackAndSurveysMapper {
 
     public static FeedbackAndSurveysDTO entityToDto(FeedbackAndSurveys feedbackAndSurveys) {

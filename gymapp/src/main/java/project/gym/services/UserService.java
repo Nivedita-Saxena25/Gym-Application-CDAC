@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 
 	@Service
-	public class UserService  implements IUsersService {
+	public class UserService  implements IUsersService,UserDetailsService {
 		@Autowired
 	    private final IUsers usersDAO;
 
@@ -91,7 +92,7 @@ import java.util.Optional;
 	    
 		@Override
 		public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-			return null;
+			return usersDAO.findByUsername(username).orElseThrow(()->new UserNotFoundException("username is not found"));
 		}
 
 	}

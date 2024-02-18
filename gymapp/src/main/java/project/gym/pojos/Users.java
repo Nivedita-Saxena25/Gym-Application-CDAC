@@ -58,9 +58,19 @@ public class Users {
     private Date registrationDate;
     
     public Users() {
-        username = "example@123";
-        password = "password";
+        username = "";
+        password = "";
     }
+    public Long getId() {
+        return userID;
+    }
+    public Users getUserById(Long userId) {
+        Users user = new Users();
+        user.setUserID(userId);
+        return user;
+    }
+
+  
     
 }
 

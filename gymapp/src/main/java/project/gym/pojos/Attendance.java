@@ -1,8 +1,17 @@
 package project.gym.pojos;
 
 import javax.persistence.*;
-import java.util.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Date;
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "attendance")
 public class Attendance {
@@ -23,50 +32,10 @@ public class Attendance {
     @Column(name = "check_out_time")
     @Temporal(TemporalType.TIMESTAMP)
     private Date checkOutTime;
+    
+    @Column(name="status")
+    private String status;
 
-    // Constructors, getters, and setters...
-
-    public Attendance() {
-        // Default constructor
-    }
-
-    public Attendance(Users user, Date checkInTime, Date checkOutTime) {
-        this.user = user;
-        this.checkInTime = checkInTime;
-        this.checkOutTime = checkOutTime;
-    }
-
-    public Long getAttendanceID() {
-        return attendanceID;
-    }
-
-    public void setAttendanceID(Long attendanceID) {
-        this.attendanceID = attendanceID;
-    }
-
-    public Users getUser() {
-        return user;
-    }
-
-    public void setUser(Users user) {
-        this.user = user;
-    }
-
-    public Date getCheckInTime() {
-        return checkInTime;
-    }
-
-    public void setCheckInTime(Date checkInTime) {
-        this.checkInTime = checkInTime;
-    }
-
-    public Date getCheckOutTime() {
-        return checkOutTime;
-    }
-
-    public void setCheckOutTime(Date checkOutTime) {
-        this.checkOutTime = checkOutTime;
-    }
 
     // Additional methods, if needed
 }

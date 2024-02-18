@@ -25,11 +25,10 @@ import java.util.Optional;
 	        this.usersDAO = usersDAO;
 	    }
 
-	    @Override
 	    public Users getUserById(Long userId) {
 	        return usersDAO.findById(userId).orElse(null);
 	    }
-
+	    
 	    @Override
 	    public List<Users> getAllUsers() {
 	        return usersDAO.findAll();

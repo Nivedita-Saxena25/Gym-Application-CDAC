@@ -11,5 +11,7 @@ public interface IBookingService {
 
     Booking saveBooking(Booking booking);
 
-    void deleteBooking(Long bookingId);
+    String deleteBooking(Long bookingId);
+    
+    Booking updateBooking(Long bookingId,Booking updatedBooking);
 }

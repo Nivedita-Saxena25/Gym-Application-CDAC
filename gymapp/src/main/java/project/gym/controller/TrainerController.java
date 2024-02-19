@@ -27,13 +27,13 @@ public class TrainerController {
 		return new ResponseEntity<>("Trainer registered successfully", HttpStatus.OK);
 	}
 
-	@GetMapping
+	@GetMapping("/getAllTrainers")
 	public List<TrainerResponseDto> getTrainers() {
 		List<Trainer> trainers = trainerService.getAllTrainers();
 		return TrainerMapper.trainerEntityListToResponseDtoList(trainers);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/updateTrainer/{id}")
 	public ResponseEntity<TrainerResponseDto> updateTrainerById(@PathVariable Long id,
 			@RequestBody RegistrationRequestDto updatedTrainerDto) {
 		try {
@@ -46,7 +46,7 @@ public class TrainerController {
 		}
 	}
 
-	@GetMapping("/byid/{id}")
+	@GetMapping("/getTrainerById/{id}")
 	public ResponseEntity<TrainerResponseDto> getTrainerById(@PathVariable Long id) {
 		try {
 			Trainer trainer = trainerService.getTrainerById(id);
@@ -56,7 +56,7 @@ public class TrainerController {
 		}
 	}
 
-	@DeleteMapping("/byid/{id}")
+	@DeleteMapping("/deleteTrainer/{id}")
 	public ResponseEntity<String> deleteTrainer(@PathVariable Long id) {
 		try {
 			String result = trainerService.deleteTrainer(id);

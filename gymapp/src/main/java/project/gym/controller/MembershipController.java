@@ -35,13 +35,13 @@ public class MembershipController {
 		return new ResponseEntity<>("Membership registered successfully", HttpStatus.OK);
 	}
 
-	@GetMapping
+	@GetMapping("/getAllMemberships")
 	public List<MembershipResponseDto> getAllMemberships() {
 		List<Membership> membership = MembershipService.getAllMemberships();
 		return MembershipMapper.membershipEntityListToResponseDtoList(membership);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/updateMembership/{id}")
 	public ResponseEntity<MembershipResponseDto> updateMembershipById(@PathVariable Long id,
 			@RequestBody RegistrationRequestDto updatedMembershipDto) {
 		try {
@@ -54,7 +54,7 @@ public class MembershipController {
 		}
 	}
 
-	@GetMapping("/byid/{id}")
+	@GetMapping("/getMembershipById/{id}")
 	public ResponseEntity<MembershipResponseDto> getMembershipById(@PathVariable Long id) {
 		try {
 			Membership membership = MembershipService.getMembershipById(id);
@@ -64,7 +64,7 @@ public class MembershipController {
 		}
 	}
 
-	@DeleteMapping("/byid/{id}")
+	@DeleteMapping("/deleteMembership/{id}")
 	public ResponseEntity<String> deleteMembership(@PathVariable Long id) {
 		try {
 			String result = MembershipService.deleteMembership(id);

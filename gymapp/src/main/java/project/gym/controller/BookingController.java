@@ -27,21 +27,21 @@ public class BookingController {
 	@Autowired
 	private IBookingService bookingService;
 
-	@PostMapping
+	@PostMapping("/addBooking")
 	public ResponseEntity<String> saveBooking(@RequestBody Booking booking) {
 
 		bookingService.saveBooking(booking);
 		return new ResponseEntity<>("Booking successfully", HttpStatus.OK);
 	}
 
-	@GetMapping
-	public List<BookingResponseDto> getbookings() {
+	@GetMapping("/getAllBookings")
+	public List<BookingResponseDto> getAllBookings() {
 		List<Booking> bookings = bookingService.getAllBookings();
 		return BookingMapper.entityListToResponseDtoList(bookings);
 	}
 
-	@PutMapping("/{id}")
-	public ResponseEntity<BookingResponseDto> updatebookingById(@PathVariable Long id,
+	@PutMapping("/updateBooking/{id}")
+	public ResponseEntity<BookingResponseDto> updateBookingById(@PathVariable Long id,
 			@RequestBody BookingResponseDto bookingResponseDto) {
 		try {
 			Booking updatedBooking = bookingService.updateBooking(id, BookingMapper.dtoToEntity(bookingResponseDto));
@@ -52,7 +52,7 @@ public class BookingController {
 		}
 	}
 
-	@GetMapping("/byid/{id}")
+	@GetMapping("/getBookingById/{id}")
 	public ResponseEntity<BookingResponseDto> getBookingById(@PathVariable Long id) {
 		try {
 			Booking booking = bookingService.getBookingById(id);
@@ -62,7 +62,7 @@ public class BookingController {
 		}
 	}
 
-	@DeleteMapping("/byid/{id}")
+	@DeleteMapping("/deleteBooking/{id}")
 	public ResponseEntity<String> deleteBooking(@PathVariable Long id) {
 		try {
 			String result = bookingService.deleteBooking(id);

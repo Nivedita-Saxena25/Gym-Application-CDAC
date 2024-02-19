@@ -5,38 +5,42 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import project.gym.InventoryItemDto.InventoryItemResponseDto;
 import project.gym.mapper.InventoryItemMapper;
 import project.gym.pojos.InventoryItem;
 import project.gym.services.IInventoryService;
 
-@Controller("/inventory")
+@RestController
+@RequestMapping("/inventory")
+@CrossOrigin("*")
 public class InventoryItemController {
 	@Autowired
 	private IInventoryService iInventoryService;
 
-	@PostMapping
+	@PostMapping("/addItem")
 	public ResponseEntity<String> addInventory(@RequestBody InventoryItem inventoryItem) {
 
 		iInventoryService.saveItem(inventoryItem);
 		return new ResponseEntity<>("Item Add successfully", HttpStatus.OK);
 	}
 
-	@GetMapping
+	@GetMapping("/getAllItem")
 	public List<InventoryItemResponseDto> getAllItems() {
 		List<InventoryItem> items = iInventoryService.getAllItems();
 		return InventoryItemMapper.entityListToResponseDtoList(items);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/updateItem/{id}")
 	public ResponseEntity<InventoryItemResponseDto> updateItemsById(@PathVariable Long id,
 			@RequestBody InventoryItemResponseDto inventoryItemResponseDto) {
 		try {
@@ -49,7 +53,7 @@ public class InventoryItemController {
 		}
 	}
 
-	@GetMapping("/byid/{id}")
+	@GetMapping("/getItembyid/{id}")
 	public ResponseEntity<InventoryItemResponseDto> getItemById(@PathVariable Long id) {
 		try {
 			InventoryItem items = iInventoryService.getItemById(id);
@@ -59,7 +63,7 @@ public class InventoryItemController {
 		}
 	}
 
-	@DeleteMapping("/byid/{id}")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<String> deleteItem(@PathVariable Long id) {
 		try {
 			String result = iInventoryService.deleteItem(id);

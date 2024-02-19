@@ -24,20 +24,20 @@ public class ClassScheduleController {
 	@Autowired
 	private IClassScheduleService classScheduleService;
 
-	@PostMapping
-	public ResponseEntity<String> scheduleClass(@RequestBody ClassSchedule classSchedule) {
+	@PostMapping("/addClass")
+	public ResponseEntity<String> addClass(@RequestBody ClassSchedule classSchedule) {
 		// Save the class
 		classScheduleService.saveClassSchedule(classSchedule);
 		return new ResponseEntity<>("Class registered successfully", HttpStatus.OK);
 	}
 
-	@GetMapping
+	@GetMapping("/getAllClasses")
 	public List<ClassScheduleResponseDto> getAllClasses() {
 		List<ClassSchedule> classes = classScheduleService.getAllClassSchedules();
 		return ClassScheduleMapper.classScheduleEntityListToResponseDtoList(classes);
 	}
 
-	@PutMapping("/{id}")
+	@PutMapping("/updateClass/{id}")
 	public ResponseEntity<ClassScheduleResponseDto> updateClassById(@PathVariable Long id,
 			@RequestBody ClassScheduleResponseDto classScheduleDto) {
 		try {
@@ -50,7 +50,7 @@ public class ClassScheduleController {
 		}
 	}
 
-	@GetMapping("/byid/{id}")
+	@GetMapping("/getClassById/{id}")
 	public ResponseEntity<ClassScheduleResponseDto> getClassById(@PathVariable Long id) {
 		try {
 			ClassSchedule classes = classScheduleService.getClassScheduleById(id);
@@ -60,7 +60,7 @@ public class ClassScheduleController {
 		}
 	}
 
-	@DeleteMapping("/byid/{id}")
+	@DeleteMapping("/deleteClass/{id}")
 	public ResponseEntity<String> deleteClass(@PathVariable Long id) {
 		try {
 			String result = classScheduleService.deleteClassSchedule(id);

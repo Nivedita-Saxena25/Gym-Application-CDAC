@@ -6,12 +6,14 @@ import project.gym.pojos.Users;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Component;
+@Component
 public class DietPlanMapper {
 
     public static DietPlanDto entityToDto(DietPlan dietPlan) {
         DietPlanDto dto = new DietPlanDto();
         dto.setId(dietPlan.getId());
-        dto.setUserId(dietPlan.getUser().getId());
+        dto.setUserId(dietPlan.getUser().getUserId());
         dto.setDietType(dietPlan.getDietType());
         dto.setMealPlan(dietPlan.getMealPlan());
         dto.setStartDate(dietPlan.getStartDate());

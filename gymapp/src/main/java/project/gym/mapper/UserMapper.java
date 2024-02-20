@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import project.gym.customException.InvalidRegistrationException;
@@ -15,7 +16,7 @@ import project.gym.dto.UsersDto.RegistrationRequestDto;
 import project.gym.dto.UsersDto.UserResponseDto;
 import project.gym.dto.UsersDto.Userdto;
 import project.gym.pojos.Users;
-
+@Component
 public class UserMapper {
 
 	 public static Users dtoToCustomerEntity(RegistrationRequestDto registrationRequestDto) {
@@ -42,7 +43,7 @@ public class UserMapper {
 	        user.setHealthRecords(userDTO.getHealthRecords());
 
 	        // Set username and encode password
-	        user.setUsername(registrationRequestDto.getUsername());
+	        user.setEmail(registrationRequestDto.getUsername());
 	        user.setPassword(encodePassword(registrationRequestDto.getPassword()));
 
 	        // Set registration date if available
@@ -59,7 +60,7 @@ public class UserMapper {
     public static UserResponseDto userEntityToUserResponseDTO(Users userEntity) {
         UserResponseDto userResponseDTO = new UserResponseDto();
 
-        userResponseDTO.setUserId(userEntity.getUserID());
+        userResponseDTO.setUserId(userEntity.getUserId());
         userResponseDTO.setFirstName(userEntity.getFirstName());
         userResponseDTO.setLastName(userEntity.getLastName());
         userResponseDTO.setAddress(userEntity.getAddress());

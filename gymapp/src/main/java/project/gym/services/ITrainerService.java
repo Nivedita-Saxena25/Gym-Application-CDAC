@@ -2,14 +2,18 @@ package project.gym.services;
 
 import java.util.List;
 
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import project.gym.pojos.Trainer;
 
-public interface ITrainerService {
+public interface ITrainerService{
 	Trainer getTrainerById(Long trainerId);
 
-    List<Trainer> getAllTrainers();
+	List<Trainer> getAllTrainers();
 
-    Trainer saveTrainer(Trainer trainer);
+	Trainer saveTrainer(Trainer trainer);
 
-    void deleteTrainer(Long trainerId);
+	String deleteTrainer(Long trainerId);
+
+	Trainer updateTrainer(Long trainerId, Trainer updatedTrainer);
 }

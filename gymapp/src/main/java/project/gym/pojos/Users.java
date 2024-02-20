@@ -1,30 +1,57 @@
 package project.gym.pojos;
-import jakarta.persistence.*;
-import java.util.Date;
-import java.util.List;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import java.util.Collection;
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+
+@Setter
+@Getter
+@AllArgsConstructor
+//@NoArgsConstructor(access = AccessLevel.PROTECTED) // Set the access level
 @Entity
 @Table(name = "users")
-public class Users {
+public class Users implements UserDetails{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long userID;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name", nullable = false)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name", nullable = false)
     private String lastName;
 
     @Column(name = "contact_number")
     private String contactNumber;
 
-    @Column(name = "email")
+    @Column(name = "email", nullable = false)
     private String email;
-
-    @Column(name = "address")
+    
+    @Column(name = "user_name", unique = true, nullable = false)
+    private String username;
+    
+    @Column(name ="password", nullable = false)
+    private String password;
+    
+	@Column(name = "address")
     private String address;
 
     @Column(name = "health_records")
@@ -33,117 +60,46 @@ public class Users {
     @Column(name = "registration_date")
     @Temporal(TemporalType.DATE)
     private Date registrationDate;
-
-    @OneToMany(mappedBy = "user")
-    private List<Membership> memberships;
-
-    @OneToMany(mappedBy = "user")
-    private List<Attendance> attendances;
-
-    @OneToMany(mappedBy = "user")
-    private List<Booking> bookings;
-
-    @OneToMany(mappedBy = "user")
-    private List<BillingAndPayments> bills;
-
-    @OneToMany(mappedBy = "user")
-    private List<ReportsAndAnalytics> reports;
-
-    @OneToMany(mappedBy = "user")
-    private List<Communication> communications;
-
-    @OneToMany(mappedBy = "user")
-    private List<HealthAndFitnessTracking> trackings;
-
-    @OneToMany(mappedBy = "user")
-    private List<CustomerSupport> tickets;
-
-    @OneToMany(mappedBy = "user")
-    private List<SecurityAndPrivacy> securities;
-
-    @OneToMany(mappedBy = "user")
-    private List<FeedbackAndSurveys> surveys;
-
-    // Constructors, getters, and setters...
-
+    
     public Users() {
-        // Default constructor
+        username = "";
+        password = "";
     }
-
-    public Users(String firstName, String lastName, String contactNumber, String email, String address,
-                String healthRecords, Date registrationDate) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.contactNumber = contactNumber;
-        this.email = email;
-        this.address = address;
-        this.healthRecords = healthRecords;
-        this.registrationDate = registrationDate;
-    }
-
-    public Long getUserID() {
+    public Long getId() {
         return userID;
     }
-
-    public void setUserID(Long userID) {
-        this.userID = userID;
+    public Users getUserById(Long userId) {
+        Users user = new Users();
+        user.setUserID(userId);
+        return user;
     }
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+	@Override
+	public boolean isEnabled() {
+		// TODO Auto-generated method stub
+		return true;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getContactNumber() {
-        return contactNumber;
-    }
-
-    public void setContactNumber(String contactNumber) {
-        this.contactNumber = contactNumber;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getHealthRecords() {
-        return healthRecords;
-    }
-
-    public void setHealthRecords(String healthRecords) {
-        this.healthRecords = healthRecords;
-    }
-
-    public Date getRegistrationDate() {
-        return registrationDate;
-    }
-
-    public void setRegistrationDate(Date registrationDate) {
-        this.registrationDate = registrationDate;
-    }
-
-    // Additional methods, if needed
+  
+    
 }
+

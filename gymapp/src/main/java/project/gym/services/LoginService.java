@@ -27,8 +27,7 @@ public class LoginService implements UserDetailsService,ILoginService {
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         Login user = logindao.findByUsername(email)
                 .orElseThrow(() -> new UserNotFoundException("Username not found: " + email));
-        System.out.println(user.getUsername());
-        System.out.println(user.getPassword());
+
         // Creating a UserDetails object using Spring Security's User class
         return user;
     }

@@ -147,6 +147,7 @@ public class UserService implements IUsersService {
 
         // Set the user ID in the login object
         login.setUsername(savedUser.getEmail());
+        login.setPassword(savedUser.getPassword());
         loginRepository.save(login);
 
         // Save HealthAndFitnessTracking

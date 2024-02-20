@@ -47,22 +47,21 @@ public class LoginController {
     
     private void doAuthenticate(String email, String password) {
         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(email, password);
-        System.out.println("email :::" + email);
-        System.out.println("pass :::" + password);
         try {
             manager.authenticate(authentication);
-            System.out.println("hello");
+            System.out.println("Authentication successful!");
         } catch (BadCredentialsException e) {
             // Log the exception message for debugging
-        	e.getStackTrace();
-            System.out.println("Authentication failed: " + e.getMessage());
+            e.printStackTrace();
+            System.out.println("Authentication failed: Bad credentials");
             throw new BadCredentialsException("Invalid Username or Password!!");
         } catch (Exception e) {
             // Log any other exceptions
-        	e.getStackTrace();
+            e.printStackTrace();
             System.out.println("Authentication error: " + e.getMessage());
             throw new RuntimeException("Authentication error");
         }
     }
+
 
 }

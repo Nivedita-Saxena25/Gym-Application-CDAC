@@ -1,0 +1,98 @@
+[
+  {
+    "cidade": "Ribeirão Preto",
+    "estado": "São Paulo",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Av. Antônio Diederichsen, 389 - Jardim America, Ribeirão Preto - SP, 14020-250",
+    "academia_img": "https://scproduction.s3.sa-east-1.amazonaws.com/wysiwyg_uploads/cms/images/2018/10/01/19/07-h9ytse3i.JPG"
+  },
+  {
+    "cidade": "Belo Horizonte",
+    "estado": "Mineas Gerais",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "R. Curitiba, 1447 - Centro, Belo Horizonte - MG, 30170-122",
+    "academia_img": "https://www.recreiodajuventude.com.br/userfiles/conteudos/academia-guarany1.jpg"
+  },
+  {
+    "cidade": "Porto Seguro",
+    "estado": "Bahia",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Av. 22 de Abril, 245 - Porto Seguro, BA, 45810-000",
+    "academia_img": "https://files.nsctotal.com.br/s3fs-public/styles/paragraph_image_style/public/graphql-upload-files/cuidados-academia-coronavirus_0.jpg"
+  },
+  {
+    "cidade": "Curitiba",
+    "estado": "Paraná",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "R. Jerônimo Durski, 2490 - Bigorrilho, Curitiba - PR, 80730-290",
+    "academia_img": "https://academiadocarlao.com.br/wp-content/uploads/2022/01/academia-atibaia.jpg"
+  },
+  {
+    "cidade": "Florianópolis",
+    "estado": "Santa Catarina",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "R. Jerônimo Coelho, 215 - Centro, Florianópolis - SC, 88010-030",
+    "academia_img": "https://i0.wp.com/faroldenoticias.com.br/wp-content/uploads/2022/02/DSC_1631-scaled.jpg"
+  },
+  {
+    "cidade": "Campinas",
+    "estado": "São Paulo",
+    "valor": 79,
+    "inauguracao": true,
+    "endereco": "Av. José de Souza Campos, 1387 - Cambuí, Campinas - SP, 13025-320",
+    "academia_img": "https://dnd1g0gk41u1l.cloudfront.net/image/filename/4260834/x_lg_2wg8myhP9zpKJhkDMvtsLfCqzwAYoWO5.jpeg"
+  },
+  {
+    "cidade": "Porto Alegre",
+    "estado": "Rio Grande do Sul",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Av. Diário de Notícias, 300 - Cristal, Porto Alegre - RS, 90810-080",
+    "academia_img": "https://s3.amazonaws.com/smartsystem/pictures/3403/big/smart-fit-academia-mogi-das-cruzes-sp-sao-paulo-area-peso-livre-musculacao.jpg"
+  },
+  {
+    "cidade": "Fortaleza ",
+    "estado": "Rio Grande do Sul",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Rua Germano Franck, 300 - Parangaba, Fortaleza - CE, 60740-020",
+    "academia_img": "https://s3.amazonaws.com/smartsystem/pictures/5144/original/smart-fit-academia-unidade-jacarei-sp-3-equipamento-area-cardiovascular-simulador_de_escada.jpg"
+  },
+  {
+    "cidade": "Balneário Camboriú",
+    "estado": "Santa Catarina",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Av. Brasil, 1755 - Centro, Balneário Camboriú - SC, 88330-012",
+    "academia_img": "https://s3.amazonaws.com/smartsystem/pictures/4521/original/smart-fit-academia-unidade-barra_funda-sp-2-equipamento-area-cardiovascular-esteira.jpg"
+  },
+  {
+    "cidade": "Gramado",
+    "estado": "Rio Grande do Sul",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Av. Borges de Medeiros, 3088 - Vila Suica, Gramado - RS, 95670-000",
+    "academia_img": "https://d1a3v8txm37nbo.cloudfront.net/image/filename/4116562/x_lg_uHpG43cezNFIPBafxdsBXAEw7Tk3NI70.png"
+  },
+  {
+    "cidade": "Rio de Janeiro",
+    "estado": "Rio de Janeiro",
+    "valor": 79,
+    "inauguracao": true,
+    "endereco": "Estr. do Monteiro, 1200 - Campo Grande, Rio de Janeiro - RJ, 23036-340",
+    "academia_img": "https://carpediemacademia.com.br/wp-content/uploads/2021/10/estrutura-1.jpg"
+  },
+  {
+    "cidade": "São Paulo",
+    "estado": "São Paulo",
+    "valor": 89,
+    "inauguracao": false,
+    "endereco": "Av. Paulista, 1230 - Bela Vista, São Paulo - SP, 01310-100",
+    "academia_img": "https://veja.abril.com.br/wp-content/uploads/2021/01/ACADEMIA-VAZIA.jpg.jpg"
+  }
+]

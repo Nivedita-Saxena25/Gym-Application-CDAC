@@ -1,4 +1,73 @@
-import styled from 'styled-components'
+// import styled from 'styled-components'
+
+// export const Container = styled.div`
+//     width: 100%;
+//     height: 100vh;
+//     overflow: hidden;
+//     display: flex;
+//     align-items: center;
+// `
+
+// export const ContainerInfo = styled.div`
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     width: 100%;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     z-index: 2;
+
+//     h1{
+//         text-align: center;
+//         font-size: 34px;
+//         margin-top: -0.2em;
+//         z-index: 2;
+//         width: 90%;
+//         text-shadow: 0 0 10px #ffffff50;
+
+//         @media only screen and (max-width: 367px){
+//             font-size: 30px;
+//             margin-top: .5em;
+//         }
+//     }
+
+//     span{
+//         letter-spacing: 1px;
+//         color: #ff0022;
+//         font-weight: 800;
+//         text-shadow: 0 0 10px #ff002275;
+//     }
+   
+//     img{
+//         z-index: 2;
+//         max-width: 500px;
+//         width: 85%;
+//         margin: 0 auto;
+//     }
+// `
+
+// export const Bg = styled.img`
+//     height: 100vh;
+//     width: 100%;
+//     opacity: 70%;
+//     object-fit: cover;
+//     position: absolute;
+//     top: 0;
+// `
+
+// export const Grad = styled.div`
+//     z-index: 1;
+//     width: 100%;
+//     height: 100vh;
+//     position: absolute;
+//     top: 0;
+//     background-image: linear-gradient(0deg, #222 0%,transparent 30%,
+//     transparent 70%, #131010 100%);
+// `
+
+import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
@@ -6,7 +75,8 @@ export const Container = styled.div`
     overflow: hidden;
     display: flex;
     align-items: center;
-`
+    position: relative; /* Added */
+`;
 
 export const ContainerInfo = styled.div`
     display: flex;
@@ -19,7 +89,7 @@ export const ContainerInfo = styled.div`
     transform: translate(-50%, -50%);
     z-index: 2;
 
-    h1{
+    h1 {
         text-align: center;
         font-size: 34px;
         margin-top: -0.2em;
@@ -27,35 +97,26 @@ export const ContainerInfo = styled.div`
         width: 90%;
         text-shadow: 0 0 10px #ffffff50;
 
-        @media only screen and (max-width: 367px){
+        @media only screen and (max-width: 367px) {
             font-size: 30px;
             margin-top: .5em;
         }
     }
 
-    span{
+    span {
         letter-spacing: 1px;
         color: #ff0022;
         font-weight: 800;
         text-shadow: 0 0 10px #ff002275;
     }
    
-    img{
+    img {
         z-index: 2;
         max-width: 500px;
         width: 85%;
         margin: 0 auto;
     }
-`
-
-export const Bg = styled.img`
-    height: 100vh;
-    width: 100%;
-    opacity: 70%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-`
+`;
 
 export const Grad = styled.div`
     z-index: 1;
@@ -63,6 +124,16 @@ export const Grad = styled.div`
     height: 100vh;
     position: absolute;
     top: 0;
-    background-image: linear-gradient(0deg, #222 0%,transparent 30%,
-    transparent 70%, #131010 100%);
-`
+    background-image: linear-gradient(0deg, #222 0%, transparent 30%, transparent 70%, #131010 100%);
+`;
+
+// Styled component for background image
+export const Bg = styled.img`
+    height: 100vh;
+    width: 100%;
+    opacity: 0.7; /* Changed */
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+`;
+

@@ -40,6 +40,7 @@ public class DietPlan {
     // Constructors, getters, and setters...
 
     public DietPlan() {
+<<<<<<< HEAD
         // Default constructor
     }
 
@@ -51,6 +52,24 @@ public class DietPlan {
         this.endDate = endDate;
     }
 
+=======
+        dietType = "";
+        mealPlan = "";
+        startDate = LocalDate.of(2023, 9, 12);
+        endDate = LocalDate.of(2023, 10, 12);
+    }
+
+
+    public DietPlan(Users user, String dietType, String mealPlan, LocalDate startDate, LocalDate endDate) {
+        this.user = user;
+        this.dietType = dietType;
+        this.mealPlan = mealPlan;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+
+     
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
     // Getters and setters...
 
     // hashCode() and equals() methods...

@@ -18,7 +18,11 @@ public class AttendanceMapper {
     public AttendanceDto entityToDto(Attendance attendance) {
         AttendanceDto dto = new AttendanceDto();
         dto.setId(attendance.getAttendanceID());
+<<<<<<< HEAD
         dto.setUserId(attendance.getUser().getUserID());
+=======
+        dto.setUserId(attendance.getUser().getUserId());
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
         dto.setCheckInTime(attendance.getCheckInTime());
         dto.setCheckOutTime(attendance.getCheckOutTime());
         dto.setStatus(attendance.getStatus());

@@ -6,12 +6,23 @@ import project.gym.pojos.Users;
 import java.util.List;
 import java.util.stream.Collectors;
 
+<<<<<<< HEAD
 public class DietPlanMapper {
 
     public static DietPlanDto entityToDto(DietPlan dietPlan) {
         DietPlanDto dto = new DietPlanDto();
         dto.setId(dietPlan.getId());
         dto.setUserId(dietPlan.getUser().getId());
+=======
+import org.springframework.stereotype.Component;
+@Component
+public class DietPlanMapper {
+
+    public static DietPlanDto entityToDto(DietPlan dietPlan) {
+        DietPlanDto dto = new DietPlanDto();
+        dto.setId(dietPlan.getId());
+        dto.setUserId(dietPlan.getUser().getUserId());
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
         dto.setDietType(dietPlan.getDietType());
         dto.setMealPlan(dietPlan.getMealPlan());
         dto.setStartDate(dietPlan.getStartDate());

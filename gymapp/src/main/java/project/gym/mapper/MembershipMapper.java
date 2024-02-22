@@ -3,12 +3,22 @@ package project.gym.mapper;
 import java.util.List;
 import java.util.stream.Collectors;
 
+<<<<<<< HEAD
 import org.springframework.util.StringUtils;
 import project.gym.customException.InvalidRegistrationException;
 import project.gym.dto.MembershipDto.MembershipResponseDto;
 import project.gym.dto.MembershipDto.RegistrationRequestDto;
 import project.gym.pojos.Membership;
 
+=======
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+import project.gym.customException.InvalidRegistrationException;
+import project.gym.dto.MembershipDto.MembershipResponseDto;
+import project.gym.dto.MembershipDto.RegistrationRequestDto;
+import project.gym.pojos.Membership;
+@Component
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
 public class MembershipMapper {
 
 	public static Membership dtoToMembershipEntity(RegistrationRequestDto membershipRequestDto) {

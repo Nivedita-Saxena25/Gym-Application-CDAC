@@ -15,7 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+<<<<<<< HEAD
 import project.gym.InventoryItemDto.InventoryItemResponseDto;
+=======
+import project.gym.dto.InventoryItemDto.InventoryItemResponseDto;
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
 import project.gym.mapper.InventoryItemMapper;
 import project.gym.pojos.InventoryItem;
 import project.gym.services.IInventoryService;

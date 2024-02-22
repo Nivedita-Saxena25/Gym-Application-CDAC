@@ -13,7 +13,11 @@ public class FeedbackAndSurveysMapper {
     public static FeedbackAndSurveysDTO entityToDto(FeedbackAndSurveys feedbackAndSurveys) {
         FeedbackAndSurveysDTO dto = new FeedbackAndSurveysDTO();
         dto.setSurveyID(feedbackAndSurveys.getSurveyID());
+<<<<<<< HEAD
         dto.setUserId(feedbackAndSurveys.getUser() != null ? feedbackAndSurveys.getUser().getId() : null);
+=======
+        dto.setUserId(feedbackAndSurveys.getUser() != null ? feedbackAndSurveys.getUser().getUserId() : null);
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
         dto.setFeedbackType(feedbackAndSurveys.getFeedbackType());
         dto.setFeedbackContent(feedbackAndSurveys.getFeedbackContent());
         dto.setSurveyDate(feedbackAndSurveys.getSurveyDate());

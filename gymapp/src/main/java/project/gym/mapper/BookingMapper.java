@@ -3,6 +3,7 @@ package project.gym.mapper;
 import java.util.List;
 import java.util.stream.Collectors;
 
+<<<<<<< HEAD
 import org.springframework.util.StringUtils;
 
 import project.gym.customException.InvalidRegistrationException;
@@ -10,6 +11,16 @@ import project.gym.customException.InvalidRegistrationException;
 import project.gym.dto.Booking.BookingResponseDto;
 import project.gym.pojos.Booking;
 
+=======
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
+import project.gym.customException.InvalidRegistrationException;
+
+import project.gym.dto.Booking.BookingResponseDto;
+import project.gym.pojos.Booking;
+@Component
+>>>>>>> branch 'Nivedita' of https://github.com/Nivedita-Saxena25/Health-Fitness-Management-System.git
 public class BookingMapper {
 
 	public static Booking dtoToEntity(BookingResponseDto responseDto) {

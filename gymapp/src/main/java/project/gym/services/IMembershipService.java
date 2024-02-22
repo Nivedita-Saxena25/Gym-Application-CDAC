@@ -3,13 +3,16 @@ package project.gym.services;
 import java.util.List;
 
 import project.gym.pojos.Membership;
+import project.gym.pojos.Trainer;
 
 public interface IMembershipService {
-	 Membership getMembershipById(Long membershipId);
+	Membership getMembershipById(Long membershipId);
 
-	    List<Membership> getAllMemberships();
+	List<Membership> getAllMemberships();
 
-	    Membership saveMembership(Membership membership);
+	Membership saveMembership(Membership membership);
 
-	    void deleteMembership(Long membershipId);
+	String deleteMembership(Long membershipId);
+
+	Membership updateMembership(Long membershipId, Membership updatedMembership);
 }

@@ -11,6 +11,7 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
+import project.gym.pojos.Login;
 import project.gym.pojos.Users;
 
 @Component
@@ -48,11 +49,12 @@ public class JwtHelper {
 	// check if the token has expired
 	private Boolean isTokenExpired(String token) {
 		final Date expiration = getExpirationDateFromToken(token);
+		
 		return expiration.before(new Date());
 	}
 
 	// generate token for user
-	public String generateToken(Users userDetails) {
+	public String generateToken(Login userDetails) {
 		Map<String, Object> claims = new HashMap<>();
 		return doGenerateToken(claims, userDetails.getUsername());
 	}
@@ -81,4 +83,6 @@ public class JwtHelper {
 		final String username = getUsernameFromToken(token);
 		return (username.equals(userDetails.getUsername()) && !isTokenExpired(token));
 	}
+
+	
 }

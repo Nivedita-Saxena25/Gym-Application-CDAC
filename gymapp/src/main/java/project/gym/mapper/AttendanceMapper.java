@@ -18,7 +18,7 @@ public class AttendanceMapper {
     public AttendanceDto entityToDto(Attendance attendance) {
         AttendanceDto dto = new AttendanceDto();
         dto.setId(attendance.getAttendanceID());
-        dto.setUserId(attendance.getUser().getUserID());
+        dto.setUserId(attendance.getUser().getUserId());
         dto.setCheckInTime(attendance.getCheckInTime());
         dto.setCheckOutTime(attendance.getCheckOutTime());
         dto.setStatus(attendance.getStatus());

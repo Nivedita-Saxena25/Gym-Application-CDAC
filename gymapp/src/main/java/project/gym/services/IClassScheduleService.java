@@ -11,5 +11,7 @@ public interface IClassScheduleService {
 
 	    ClassSchedule saveClassSchedule(ClassSchedule classSchedule);
 
-	    void deleteClassSchedule(Long classId);
+	    String deleteClassSchedule(Long classId);
+	    
+	    ClassSchedule updateClassSchedule(Long classId,ClassSchedule updatedClass);
 }

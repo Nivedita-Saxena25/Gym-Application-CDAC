@@ -40,8 +40,12 @@ public class DietPlan {
     // Constructors, getters, and setters...
 
     public DietPlan() {
-        // Default constructor
+        dietType = "";
+        mealPlan = "";
+        startDate = LocalDate.of(2023, 9, 12);
+        endDate = LocalDate.of(2023, 10, 12);
     }
+
 
     public DietPlan(Users user, String dietType, String mealPlan, LocalDate startDate, LocalDate endDate) {
         this.user = user;
@@ -51,6 +55,7 @@ public class DietPlan {
         this.endDate = endDate;
     }
 
+     
     // Getters and setters...
 
     // hashCode() and equals() methods...
